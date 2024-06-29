@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="admin-symbol">A</div>
+                <form class="search-form">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContainer">
+        <div class="subject-container zoom-in" data-subject="Python">
+            <h2>Python</h2>
+            <div class="file-upload">
+                <input type="file" class="file-upload-input" data-subject="python">
+                <button class="submit-button" onclick="submitFile(event)">Submit</button>
+            </div>
+        </div>
+
+        <div class="subject-container zoom-in" data-subject="HTML">
+            <h2>HTML</h2>
+            <div class="file-upload">
+                <input type="file" class="file-upload-input" data-subject="html">
+                <button class="submit-button" onclick="submitFile(event)">Submit</button>
+            </div>
+        </div>
+
+        <div class="subject-container zoom-in" data-subject="JavaScript">
+            <h2>JavaScript</h2>
+            <div class="file-upload">
+                <input type="file" class="file-upload-input" data-subject="javascript">
+                <button class="submit-button" onclick="submitFile(event)">Submit</button>
+            </div>
+        </div>
+
+        <div class="subject-container zoom-in" data-subject="DBMS">
+            <h2>DBMS</h2>
+            <div class="file-upload">
+                <input type="file" class="file-upload-input" data-subject="dbms">
+                <button class="submit-button" onclick="submitFile(event)">Submit</button>
+            </div>
+        </div>
+
+        <div class="subject-container zoom-in" data-subject="Java">
+            <h2>Java</h2>
+            <div class="file-upload">
+                <input type="file" class="file-upload-input" data-subject="java">
+                <button class="submit-button" onclick="submitFile(event)">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

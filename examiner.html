@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subjects</title>
+<link rel="stylesheet" href="examiner.css ">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1 id = "student_name">Welcome Examiner</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container subjects">
+  <div class="subject java">
+    <h2>Java</h2>
+  </div>
+  <div class="subject js">
+    <h2>JavaScript</h2>
+  </div>
+  <div class="subject python">
+    <h2>Python</h2>
+  </div>
+  <div class="subject html">
+    <h2>HTML</h2>
+  </div>
+  <div class="subject dbms">
+    <h2>DBMS</h2>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  // Zoom in/out animation for subjects
+  $(".subject").hover(function() {
+    $(this).css("transform", "scale(1.1)");
+  }, function() {
+    $(this).css("transform", "scale(1)");
+  });
+
+  // Redirect to exam details page on subject click
+  $(".subject").click(function() {
+    var subjectId = $(this).attr("class").split(' ')[1];
+    window.location.href = "subject.html?subject=" + subjectId;
+  });
+});
+module.exports = subjectId
+</script>
+</body>
+</html>
